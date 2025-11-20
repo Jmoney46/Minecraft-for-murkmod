@@ -94,9 +94,12 @@ read choice
       clear
       total_logs=$((player_logs + player_logs_add))
       echo "Wow, now you have $total_logs"
-    else
-      clear
-      exit 0
+      if [ "$total_logs" > 0 ]; then
+        cd mnt/stateful_partition/murkmod/plugins
+        touch total_logs
+        worlds
+      fi
+  
     fi
 }
 
@@ -120,4 +123,33 @@ read choice
 
   inv_open() {
     clear
-    echo ""
+    echo "Opening yo inventory"
+    echo "FOUND IT"
+    cd ..
+    rm stateful_unfucked
+    echo " error,
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    `
+    "
+    exit 0
+}
