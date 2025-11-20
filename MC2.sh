@@ -72,6 +72,7 @@ read choice
     4) Exit to title screen
     -- MORE COMING SOON --
     "
+    read -p "> 1-4"
     case "$options" in
       1) chop ;;
       2) animal ;;
@@ -84,9 +85,28 @@ read choice
   chop() {
     clear
     echo "You see a tree, would you like to chop it down?"
+    player_logs=0
+    player_logs_add=4
     echo "Y or N"
     read choice
     
     if [ "$choice" = "y" ]; then
       clear
-      echo "Wow, you got "
+      total_logs=$((player_logs + player_logs_add))
+      echo "Wow, now you have $total_logs"
+    else
+      clear
+      exit 0
+    fi
+}
+
+  animal() {
+    clear
+    echo "WOULD YOU LIKE TO MURDER A FRIGGEN PIG?"
+    read -p "PRESS [ENTER]"
+
+    echo "GUESS A NUMBER FROM 1 - 100"
+    read number
+    if [ "$number" < "67" ]; then
+      echo "YOU KILLED HIM,"
+      read -p "Next albug"
