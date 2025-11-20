@@ -57,6 +57,26 @@ read choice
     echo "press 'o' to open the world!"
     case "$open" in
       o) world
-      *) echo "wrong answer DIPSHIT"; create_world ;;
+      *) echo "wrong answer DIPSHIT"; clear; create_world ;;
     esac
 }
+
+  world() {
+    clear
+    echo "Welcome to the world, what do you think you would like to do?"
+    echo "
+
+    1) Chop Tree
+    2) Kill an animal
+    3) Open Inventory
+    4) Exit to title screen
+    -- MORE COMING SOON --
+    "
+    case "$options" in
+      1) chop ;;
+      2) animal ;;
+      3) inv_open ;;
+      4) title_1 ;;
+      500) commands
+    esac
+    
