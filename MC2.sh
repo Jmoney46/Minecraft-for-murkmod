@@ -107,6 +107,17 @@ read choice
 
     echo "GUESS A NUMBER FROM 1 - 100"
     read number
+  chop() {
     if [ "$number" < "67" ]; then
       echo "YOU KILLED HIM,"
-      read -p "Next albug"
+      read -p "Next "
+      world
+    else
+      echo "bro ran away because he is black"
+      world
+    fi
+}
+
+  inv_open() {
+    clear
+    echo ""
